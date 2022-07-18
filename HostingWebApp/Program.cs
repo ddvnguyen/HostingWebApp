@@ -1,6 +1,5 @@
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Net.Http.Headers;
-using Omnia.Fx.NetCore.Features.TargetResolvers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,15 +33,3 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
 app.Run();
-
-
-string b = "Omnia.Fx.NetCore.Features.TargetResolvers.IFeatureTargetResolver";
-switch (b)
-{
-    case nameof(IBusinessProfileFeatureTargetResolver):
-        break;
-    case nameof(IFeatureTargetResolver):
-        break;
-    case nameof(IAppInstanceFeatureTargetResolver):
-        break;
-}
